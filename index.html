@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="icon" href="devchallenges.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <title>Devchallenges</title>
+
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --slimPhoto: 30%;
+      --widePhoto: 60%;
+    }
+
+    .light {
+      font-weight: bold;
+      color: rgba(189, 189, 189, 1)
+    }
+
+    .pageWrap {
+      position: relative;
+      width: 75vw;
+      height: 100vh;
+      margin: 0 auto;
+    }
+
+    .topBlock {
+      height: 30vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profileTop img {
+      width: 140px;
+      height: 140px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .profileTop .light {
+      font-size: .8em;
+      margin-top: 5px;
+    }
+
+    .profileTop {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profileBottom {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .accountInfo:nth-child(2) {
+      margin: 0 30px 0 30px;
+    }
+
+    .accountInfo .light {
+      font-size: .8em;
+    }
+
+    .accountInfo {
+      width: 100px;
+      height: 80px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(229, 229, 229, 1);
+    }
+
+    .gallery {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 200px;
+    }
+
+    .innerGallery {
+      width: calc(90% - var(--slimPhoto));
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .innerGallery img {
+      width: calc(50% - 10px);
+    }
+
+    .innerGallery img:nth-child(1) {
+      width: calc(100% - 10px);
+      margin-top: 0;
+    }
+
+    .gallery img {
+      border-radius: 15px;
+    }
+
+    .innerGallery img,
+    .gallery>* {
+      margin: 10px 10px 0 0;
+    }
+
+    .slim {
+      width: var(--slimPhoto);
+    }
+
+    .wide {
+      width: var(--widePhoto);
+    }
+
+    .footer {
+      color: gray;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: -10%;
+    }
+
+    @media (max-width: 400px) {
+      .profileBottom {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .profileTop img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .accountInfo {
+        width: 60px;
+        height: 48px;
+      }
+
+      .accountInfo b {
+        font-size: .9em;
+      }
+
+      .accountInfo .light {
+        font-size: .6em;
+      }
+
+      .accountInfo:nth-child(2) {
+        margin: 0 20px 0 20px;
+      }
+
+      .gallery {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      body {
+        padding-top: 30px;
+      }
+
+      .accountInfo {
+        width: 80px;
+        height: 64px;
+      }
+
+      .accountInfo:nth-child(2) {
+        margin: 0 20px 0 20px;
+      }
+
+      .profileTop img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      .gallery>img:nth-of-type(2),
+      .gallery>img:last-of-type {
+        margin-right: 0;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="pageWrap">
+
+    <div class="topBlock">
+
+      <div class="profileTop">
+        <img src="profilePhoto.png">
+        <p><b>Rodney Cotton</b></p>
+        <p class="light">Helsinki, Finland</p>
+      </div>
+
+      <div class="profileBottom">
+
+        <div class="accountInfo">
+          <p><b>100</b></p>
+          <p class="light">Posts</p>
+        </div>
+
+        <div class="accountInfo">
+          <p><b>2,242</b></p>
+          <p class="light">Followers</p>
+        </div>
+
+        <div class="accountInfo">
+          <p><b>1,432</b></p>
+          <p class="light">Following</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="gallery">
+      <img src="photo1.png" class="slim">
+      <img src="photo2.png" class="wide">
+
+      <div class="innerGallery">
+        <img src="photo3.png" class="wide">
+        <img src="photo6.png" class="slim">
+        <img src="photo5.png" class="slim">
+      </div>
+
+      <img src="photo_4.png" class="slim">
+    </div>
+
+  </div>
+
+  <p class="footer">created by <b><u>TOMEOv17</u></b> - devChallenges.io</p>
+
+</body>
+
+</html>
